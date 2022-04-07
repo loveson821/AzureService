@@ -4,3 +4,4 @@ azure-storage-blob
 azure-cognitiveservices-vision-computervision
 werkzeug
 flask-cors
+dotenv
