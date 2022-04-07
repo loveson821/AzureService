@@ -75,12 +75,12 @@ class StorageService:
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-app.route('/upload', methods=['POST'])
 
 ALLOWED_EXTENSIONS = set(['pdf', 'png', 'jpg', 'jpeg'])
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+app.route('/ocr', methods=['POST'])
 def ocr():
     files = request.files.getlist('document[]')
     print(files);
